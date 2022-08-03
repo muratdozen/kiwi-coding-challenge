@@ -63,81 +63,75 @@ class _HomePageState extends State<HomePage> {
                   style: TextStyle(fontSize: 26, fontWeight: FontWeight.bold),
                 ),
               ),
-              Expanded(
-                child: ListView(
-                  padding: const EdgeInsets.all(8),
-                  children: <Widget>[
-                    Row(
-                      children: [
-                        Text(
-                          "Location",
-                          style: TextStyle(fontWeight: FontWeight.bold),
-                        ),
-                        SizedBox(
-                          width: 10,
-                        ),
-                        Text(
-                          "Task",
-                          style: TextStyle(fontWeight: FontWeight.bold),
-                        ),
-                      ],
-                    ),
-                    Row(
-                      children: [
-                        Text(
-                          task1["location"] as String,
+              ListView(
+                padding: const EdgeInsets.all(8),
+                children: <Widget>[
+                  Row(
+                    children: [
+                      Text(
+                        "Location",
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      ),
+                      SizedBox(
+                        width: 10,
+                      ),
+                      Text(
+                        "Task",
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      ),
+                    ],
+                  ),
+                  Row(
+                    children: [
+                      Text(
+                        task1["location"] as String,
+                        style: TextStyle(
+                            color: taskCompleted1 ? Colors.grey : Colors.black),
+                      ),
+                      SizedBox(
+                        width: 10,
+                      ),
+                      Text(task1["task"] as String,
                           style: TextStyle(
                               color:
-                                  taskCompleted1 ? Colors.grey : Colors.black),
-                        ),
-                        SizedBox(
-                          width: 10,
-                        ),
-                        Text(task1["task"] as String,
-                            style: TextStyle(
-                                color: taskCompleted1
-                                    ? Colors.grey
-                                    : Colors.black)),
-                        IconButton(
-                          icon: Icon(Icons.check_circle_rounded,
-                              color:
-                                  !taskCompleted1 ? Colors.green : Colors.grey),
-                          onPressed: taskCompleted1
-                              ? () {}
-                              : () => setState(
-                                  () => taskCompleted1 = !taskCompleted1),
-                        ),
-                      ],
-                    ),
-                    Row(
-                      children: [
-                        Text(
-                          task2["location"] as String,
+                                  taskCompleted1 ? Colors.grey : Colors.black)),
+                      IconButton(
+                        icon: Icon(Icons.check_circle_rounded,
+                            color:
+                                !taskCompleted1 ? Colors.green : Colors.grey),
+                        onPressed: taskCompleted1
+                            ? () {}
+                            : () => setState(
+                                () => taskCompleted1 = !taskCompleted1),
+                      ),
+                    ],
+                  ),
+                  Row(
+                    children: [
+                      Text(
+                        task2["location"] as String,
+                        style: TextStyle(
+                            color: taskCompleted2 ? Colors.grey : Colors.black),
+                      ),
+                      SizedBox(
+                        width: 10,
+                      ),
+                      Text(task2["task"] as String,
                           style: TextStyle(
                               color:
-                                  taskCompleted2 ? Colors.grey : Colors.black),
-                        ),
-                        SizedBox(
-                          width: 10,
-                        ),
-                        Text(task2["task"] as String,
-                            style: TextStyle(
-                                color: taskCompleted2
-                                    ? Colors.grey
-                                    : Colors.black)),
-                        IconButton(
-                          icon: Icon(Icons.check_circle_rounded,
-                              color:
-                                  !taskCompleted2 ? Colors.green : Colors.grey),
-                          onPressed: taskCompleted2
-                              ? () {}
-                              : () => setState(
-                                  () => taskCompleted2 = !taskCompleted2),
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
+                                  taskCompleted2 ? Colors.grey : Colors.black)),
+                      IconButton(
+                        icon: Icon(Icons.check_circle_rounded,
+                            color:
+                                !taskCompleted2 ? Colors.green : Colors.grey),
+                        onPressed: taskCompleted2
+                            ? () {}
+                            : () => setState(
+                                () => taskCompleted2 = !taskCompleted2),
+                      ),
+                    ],
+                  ),
+                ],
               ),
             ],
           ),
