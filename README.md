@@ -1,2 +1,2 @@
 # kiwi-coding-challenge
-Kiwi Coding Challenge
+Kiwi's Flutter coding challenge over a simple and awfully written task automation app. 
